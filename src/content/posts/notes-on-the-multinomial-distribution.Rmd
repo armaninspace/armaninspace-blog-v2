@@ -1,0 +1,99 @@
+---
+title: "Notes on the Multinomial distribution"
+date: "15.02.2018"
+teaser: "A multidimensional generalization of a binomial distribution. Assume that in each experiment there are"
+pinned: FALSE
+commentEnable: FALSE
+tags: "Multinomial,Statistics,Probability"
+---
+
+A multidimensional generalization of a binomial distribution. Assume that in each experiment there are $k$ possible outcomes (enumerated by $1,2,\ldots,k$). Probabilities of these outcomes are $p_1,p_2,\ldots,p_k,$ so that 
+$$
+p_1,\ldots,p_k\geq 0, \  p_1+\ldots+p_k=1.
+$$
+Multinomial distribution describeds the number of outcomes of each type in $n$ independent repetitions of the experiment:
+
+$(X_1,\ldots,X_k)=(m_1,\ldots,m_k)$ if exactly $m_1$ experiments resulted in the outcome $1,$ exactly $m_2$ experiments resulted in the outcome $2,\ldots,$ exactly $m_k$ experiments resulted in the outcome $k.$
+
+Parameters: $n$ -- number of experiments, $k$ -- number of outcomes in each experiment, $(p_1,\ldots,p_k)$ -- probability distribution of an outcome in each experiment.
+
+Values: all sequences $(m_1,\ldots,m_k)$ of non-negative integers that sum up to $n$ (there are ${n\choose n+k-1}$ such sequences). 
+
+Probability mass function:
+$$
+P(X_1=m_1,\ldots,X_k=m_k)=\frac{n!}{m_1!\ldots m_k!}p^{m_1}_{1}\ldots p^{m_k}_k.
+$$
+
+### Derivation
+
+Let $\xi_l,$ $l=1,2,\ldots,n,$  be the result of $l$-th experiment, $\xi_l\in\{1,2,\ldots,k\}.$ The event 
+$$
+\{X_1=m_1,\ldots,X_k=m_k\}
+$$ 
+means that exactly $m_1$ variables $\xi_l=1,$ exactly $m_2$ variables $\xi_l=2,$ $\ldots,$ exactly $m_k$ variables $\xi_l=k.$ When variables $\xi_1,\ldots,\xi_l$ are already grouped according to their values, the probability becomes $p^{m_1}_1\ldots p^{m_k}_k.$ The number of partitions of $n$ elements into $k$ groups by $m_1,m_2,\ldots,m_k$ elements is $\frac{n!}{m_1!\ldots m_k!}$.
+
+Moment generating function:
+$$
+M(t_1,\ldots,t_k)=Ee^{t_1X_1+\ldots+t_kX_k}=(p_1e^{t_1}+\ldots+p_k e^{t_k})^n
+$$
+
+### Proof
+
+$$
+M(t_1,\ldots,t_k)=Ee^{t_1X_1+\ldots+t_kX_k}=
+$$
+using probability mass function
+$$
+=\sum_{m_1+\ldots+m_k=n}\frac{n!}{m_1!\ldots m_k!}p^{m_1}_1\ldots p^{m_k}_k e^{t_1m_1+\ldots +t_km_k}=
+$$
+$$
+=\sum_{m_1+\ldots+m_k=n}\frac{n!}{m_1!\ldots m_k!}(p_1e^{t_1})^{m_1}\ldots (p_ke^{t_k})^{m_k}=
+$$
+by multinomial formula
+$$
+=(p_1 e^{t_1}+\ldots+p_k e^{t_k})^n
+$$
+
+Expectation: $EX_j=np_j,$ $1\leq j\leq k.$
+
+Variance: $V(X_j)=np_j(1-p_j),$ $1\leq j\leq k$
+
+Covariance: $cov(X_i,X_j)=-np_ip_j,$ $1\leq i<j\leq k.$
+
+
+### Derivation
+
+The moment generating function of a single variable $X_j$ is obtained from $M(t_1,\ldots,t_k)$ by letting $t_i=0,$ $i\ne j.$ That is 
+$$
+Ee^{t_jX_j}=M(0,\ldots,0,t_j,0,\ldots,0)=(p_1+\ldots+p_{j-1}+p_j e^{t_j}+p_{j+1}+\ldots+p_k)^n=
+$$
+using that $p_1+\ldots+p_k=1$
+$$
+=(1-p_j+p_je^{t_j})^n
+$$
+This is exactly the moment generating function of a binomial distribution with parameters $n,p_j:$
+$$
+X_j\sim Binomial(n,p_j)
+$$
+In particular
+$$
+EX_j=np_j, \ V(X_j)=np_j(1-p_j).
+$$
+To compute expectation of the product $EX_iX_j,$ $i\ne j,$ we take second mixed derivative of $M$ at point zero:
+$$
+\frac{\partial M}{\partial t_i}=np_ie^{t_i}(p_1 e^{t_1}+\ldots+p_k e^{t_k})^n
+$$
+$$
+\frac{\partial^2 M}{\partial t_i\partial t_j}=n(n-1)p_ip_je^{t_i+t_j}(p_1 e^{t_1}+\ldots+p_k e^{t_k})^{n-2}
+$$
+Put $t_1=\ldots=t_k=0$ and get
+$$
+E X_iX_j=n(n-1)p_ip_j
+$$
+So, the covariance
+$$
+cov(X_i,X_j)=EX_iX_j-EX_iEX_j=
+$$
+$$
+=n(n-1)p_ip_j-n^2p_ip_j=-np_ip_j.
+$$

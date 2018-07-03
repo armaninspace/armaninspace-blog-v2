@@ -1,0 +1,55 @@
+---
+title: "Areas swept up by Spirals"
+date: "15.02.2018"
+teaser: "areas-swept-up-by-spirals"
+pinned: FALSE
+commentEnable: FALSE
+tags: "swept, Areas, Spirals"
+---
+
+A friend of mine and I were re-visiting Euler's identity: $e^{ \pm i\theta } = \cos \theta \pm i\sin \theta$ and we started looking at spirals of the form: $(e^z)^n = [r (\cos \theta \pm i\sin \theta)]^n$ where $\theta$ and $r$ are fixed while n varies from $(-\infty, \infty)$
+
+```{r, echo=FALSE}
+library(plotrix)
+n <- seq(-100,10,0.01)
+r.1 <- 1.1
+r.2 <- r.1
+theta <- pi/3
+f.x <- function (r,n,theta) {
+  r^n * cos(n*theta)
+} 
+f.y <- function (r,n,theta) {
+  r^n * sin(n*theta)
+} 
+x.1 <- f.x(r.1,n,theta)
+y.1 <- f.y(r.1,n,theta)
+x.2 <- f.x(r.2,n,theta)
+y.2 <- f.y(r.2,n,theta)
+x.3 <- f.x(1,n,theta)
+y.3 <- f.y(1,n,theta)
+phi <- pi/3
+r.m <- matrix(c(cos(phi), -sin(phi),
+                   sin(phi), cos(phi)), 
+                 nrow=2, byrow=TRUE)
+xy.m <- matrix(c(x.2,y.2),
+       ncol=2, byrow=FALSE)
+
+xy2.m <- xy.m %*% r.m
+x.2 <- xy2.m[,1] 
+y.2 <- xy2.m[,2] 
+par(mfrow=c(1,1))
+mx.x <- max(x.1,x.2)
+mn.x <- min(x.1,x.2)
+mx.y <- max(y.1,y.2)
+mn.y <- min(y.1,y.2)
+plot(c(mn.x,mx.x),c(mn.y,mx.y),col="white", xlab="x", ylab="y")
+#draw.circle(0,0,2,col="yellow")
+lines(x.1,y.1,col="blue",lwd="2")
+lines(x.2,y.2,col="red",lwd="2")
+lines(2*x.3,2*y.3,col="green",lwd=2)
+abline(v=0)
+abline(h=0)
+
+```
+
+

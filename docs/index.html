@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arman lost in (multidimensional) space | </title>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <meta name="generator" content="pandoc">
+
+    <script src="/static/jquery-1.11.3/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="/static/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="/static/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <script src="/static/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+    <script src="/static/bootstrap-3.3.5/shim/respond.min.js"></script>
+    <script src="/static/navigation-1.1/tabsets.js"></script>
+    <link href="/static/highlightjs-9.12.0/default.css" rel="stylesheet">
+
+    <script src="/static/highlightjs-9.12.0/highlight.js"></script>
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+    <script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+    <style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+  <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+  <script src="/static/jquery-1.11.3/jquery.min.js"></script>    
+    <link href="/static/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/static/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <script src="/static/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+    <script src="/static/bootstrap-3.3.5/shim/respond.min.js"></script>
+    <script src="/static/navigation-1.1/tabsets.js"></script>
+    <link href="/static/highlightjs-9.12.0/default.css" rel="stylesheet"> 
+    <script src="/static/highlightjs-9.12.0/highlight.js"></script>
+   
+  <link rel="stylesheet" href="/static/css/styles.css" media="all">
+  <link rel="stylesheet" href="/static/css/responsive.css">
+  <link rel="stylesheet" href="/static/css/fontawesome/css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="/static/cpager/css/cPager.css" media="all">
+    <script type="text/javascript" src="/static/cpager/js/cPager.js"></script>
+</head>
+<body class="home blog mp6 customizer-styles-applied highlander-enabled highlander-light tablet-desktop">
+<div id="page" class="hfeed site" data-off-canvas-main-canvas="">
+  <div id="hero-header" class="site-hero-section">
+    <header id="master-head" class="site-header" role="banner">
+      <div class="inner">  
+        <div class="site-branding">
+          <a class="site-logo-link" href="/" title="Home" rel="home">
+            <img src="/static/images/logo.png" alt="Home">
+          </a>
+          <h1 class="site-title"><a href="/" title="Home" rel="home">Arman lost in (multidimensional) space</a></h1>
+                   
+        </div>
+        <nav class="jetpack-social-navigation jetpack-social-navigation-svg" role="navigation" aria-label="Social Links Menu">
+          <div class="menu-social-navigation-container">
+            <ul id="menu-social-navigation" class="menu">
+              <li id="" class="menu-item menu-item-type-custom menu-item-object-custom">
+                <a href="https://github.com/armaninspace"><i class="fab fa-github fa-1x"></i></a>
+              </li>
+              <li id="" class="menu-item menu-item-type-custom menu-item-object-custom">
+                 <a href="https://www.linkedin.com/in/arman-anwar-a107961"><i class="fab fa-linkedin fa-1x"></i></a>
+              </li>
+              <li id="" class="menu-item menu-item-type-custom menu-item-object-custom ">
+                 <a href="https://twitter.com/armaninspace"><i class="fab fa-twitter fa-1x"></i></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>    
+    </header>
+  </div>
+  <nav role="navigation" class="main-navigation" id="site-navigation">
+    <div class="region region-navigation-collapsible">
+      <h2 class="sr-only" id="block-bootstrap-main-menu-menu">Main navigation</h2>
+        <ul id="primary-menu" class="menu nav-menu">
+        </ul>
+    </div>
+  </nav>
+
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+      <section class="col-sm-12">
+        <a id="main-content"></a>
+        <div class="region region-content">
+            <style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+            <div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script><!-- code folding --><div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+            <script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+            <script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+          <div class="posts-list posts-list-pinned text-left">
+            <!--wrap single list item into a container-->
+              <article role="article" class="article is-promoted teaser clearfix  post-item-pinned blog-list-items">
+                <h2 class="post-title">
+                  <a href="/content/posts/notes-on-bernoulli-distribution" rel="bookmark"><span
+                          property="schema:name">Notes on the Bernoulli distribution</span></a>
+                </h2> 
+                
+                <div class="content">
+                  <style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+                  <div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script><!-- code folding --><div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Notes on the Bernoulli distribution</h1>
+<h4 class="date"><em>15.02.2018</em></h4>
+
+</div>
+
+
+<p>Bernoulli distribution describes an outcome of a single experiment with two possible outcomes (success or failure): <span class="math inline">\(X=1\)</span> if an experiment was successfull, <span class="math inline">\(X=0\)</span> if it was not.</p>
+<p>Parameter: <span class="math inline">\(p\)</span> – probability of a success.</p>
+<p>Values: <span class="math inline">\(\{0,1\}.\)</span></p>
+<p>Probability mass function: <span class="math display">\[
+P(X=1)=p, \ P(X=0)=1-p.
+\]</span></p>
+<p>Moment generating function: <span class="math display">\[
+M(t)=1-p+pe^t
+\]</span></p>
+<div id="proof" class="section level3">
+<h3>Proof</h3>
+<p><span class="math display">\[
+M(t)=Ee^{tX}=e^t\cdot P(X=1)+e^0\cdot P(X=0)=pe^t+1-p
+\]</span></p>
+<p>All moments: <span class="math display">\[
+EX^n=p, \ n\geq 1.
+\]</span></p>
+</div>
+<div id="proof-1" class="section level3">
+<h3>Proof</h3>
+<p>Observe that <span class="math inline">\(X^n=X,\)</span> for <span class="math inline">\(n\geq 1.\)</span> Further, <span class="math display">\[
+EX=1\cdot P(X=1)+0\cdot P(X=0)=p+0=p
+\]</span></p>
+<p>Expectation: <span class="math inline">\(EX=p\)</span></p>
+<p>Variance: <span class="math inline">\(V(X)=p(1-p)\)</span></p>
+</div>
+
+
+
+
+</div>
+                  <script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+                  <script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+                  <div class="field field--label-above">                    
+                    <div class="field--items tags">
+                      <i class="fas fa-folder-open"></i>  <span class="field--item tag"> #Bernoulli</span>  <span class="field--item tag"> # Statistics</span>  <span class="field--item tag"> # Probability</span>  <span class="field--item tag"> # Elementary</span> 
+                    </div>
+                  </div>
+                  
+                </div>
+
+              </article>
+          </div>
+          <div class="posts-list posts-list-unpinned text-left">
+            <!--wrap single list item into a container-->
+              <article role="article" class="article is-promoted teaser clearfix unpinned-item blog-list-items">
+               <h2>
+                  <a href="/content/posts/areas-swept-up-by-spirals" rel="bookmark"><span
+                          property="schema:name">Areas swept up by Spirals</span></a>
+                </h2> 
+                <div class="content">
+                   <style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+                   <div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script><!-- code folding --><div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Areas swept up by Spirals</h1>
+<h4 class="date"><em>15.02.2018</em></h4>
+
+</div>
+
+
+<p>A friend of mine and I were re-visiting Euler’s identity: <span class="math inline">\(e^{ \pm i\theta } = \cos \theta \pm i\sin \theta\)</span> and we started looking at spirals of the form: <span class="math inline">\((e^z)^n = [r (\cos \theta \pm i\sin \theta)]^n\)</span> where <span class="math inline">\(\theta\)</span> and <span class="math inline">\(r\)</span> are fixed while n varies from <span class="math inline">\((-\infty, \infty)\)</span></p>
+<p><img src="areas-swept-up-by-spirals_files/figure-html/unnamed-chunk-1-1.png" width="672"></p>
+
+
+
+
+</div>
+                   <script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+                   <script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+                  <div class="field field--label-above">                    
+                    <div class="field--items tags">
+                      <i class="fas fa-folder-open"></i> <span class="field--item tag">#swept</span>  <span class="field--item tag"># Areas</span>  <span class="field--item tag"># Spirals</span> 
+                    </div>
+                  </div>
+                  
+                </div>
+
+              </article>
+              <article role="article" class="article is-promoted teaser clearfix unpinned-item blog-list-items">
+               <h2>
+                  <a href="/content/posts/notes-on-the-binomial-distribution" rel="bookmark"><span
+                          property="schema:name">Notes on the Binomial distribution</span></a>
+                </h2> 
+                <div class="content">
+                   <style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+                   <div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script><!-- code folding --><div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Notes on the Binomial distribution</h1>
+<h4 class="date"><em>15.02.2018</em></h4>
+
+</div>
+
+
+<p>Binomial distribution describes the number of successes in a series of <span class="math inline">\(n\)</span> independent identical experiments: <span class="math inline">\(X=k\)</span> if exactly <span class="math inline">\(k\)</span> experiments out of <span class="math inline">\(n\)</span> were successfull, while others were not.</p>
+<p>Parameters: <span class="math inline">\(n\)</span> – number of experiments, <span class="math inline">\(p\)</span> – probability of a success in a single experiment.</p>
+<p>Values: <span class="math inline">\(\{0,1,2,\ldots,n\}.\)</span></p>
+<p>Probability mass function: <span class="math display">\[
+P(X=k)={n\choose k}p^k(1-p)^{n-k}, \ k=0,1,2,\ldots,n.
+\]</span></p>
+<div id="derivation" class="section level3">
+<h3>Derivation</h3>
+<p>Let <span class="math inline">\(\xi_k,\)</span> <span class="math inline">\(k=1,2,\ldots,n,\)</span> be the result of <span class="math inline">\(k\)</span>-th experiment, i.e. <span class="math inline">\(\xi_k=1\)</span> if <span class="math inline">\(k\)</span>-th experiment was successfull, and <span class="math inline">\(\xi_k=0\)</span> otherwise. Then <span class="math display">\[
+X=\xi_1+\xi_2+\ldots+\xi_n,
+\]</span> By assumption, <span class="math inline">\(\xi_1,\ldots,\xi_n\)</span> are independent and each has a Bernoulli distribution with parameter <span class="math inline">\(p.\)</span> Event <span class="math inline">\(\{X=k\}\)</span> means that exactly <span class="math inline">\(k\)</span> variables of <span class="math inline">\(\xi_1\ldots,\xi_n\)</span> equal to <span class="math inline">\(1\)</span> and others are equal to <span class="math inline">\(0.\)</span> There are <span class="math inline">\({n\choose k}\)</span> possibilities to choose variables that are equal to <span class="math inline">\(1.\)</span> Each of them is <span class="math inline">\(1\)</span> with probability <span class="math inline">\(p,\)</span> other <span class="math inline">\(n-k\)</span> variables are <span class="math inline">\(0\)</span> each with probability <span class="math inline">\(1-p.\)</span></p>
+<p>Moment generating function: <span class="math display">\[
+M(t)=(1-p+pe^t)^n
+\]</span></p>
+</div>
+<div id="proof" class="section level3">
+<h3>Proof</h3>
+<p><span class="math display">\[
+M(t)=Ee^{t(\xi_1+\ldots+\xi_n)}=
+\]</span> using independence <span class="math display">\[
+=Ee^{t\xi_1}Ee^{t\xi_2}\ldots Ee^{t\xi_n}=(pe^t+1-p)^n
+\]</span></p>
+<p>Expectation: <span class="math inline">\(EX=np\)</span></p>
+<p>Variance: <span class="math inline">\(V(X)=np(1-p)\)</span></p>
+</div>
+<div id="derivation-1" class="section level3">
+<h3>Derivation</h3>
+<p>Expectation is the first derivative <span class="math inline">\(M'(0).\)</span> We have <span class="math display">\[
+M'(t)=n(pe^t+1-p)^{n-1}pe^t, \ EX=M'(0)=np.
+\]</span> Second moment is the second derivative <span class="math inline">\(M''(0).\)</span> We have <span class="math display">\[
+M''(t)=n(n-1)(pe^t+1-p)^{n-1}p^2e^{2t}+n(pe^t+1-p)^{n-1}pe^t, \]</span> <span class="math display">\[
+ EX^2=M''(0)=n(n-1)p^2+np.
+\]</span> Variance is <span class="math display">\[
+V(X)=EX^2-(EX)^2=n(n-1)p^2+np-n^2p^2=np(1-p)
+\]</span></p>
+</div>
+
+
+
+
+</div>
+                   <script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+                   <script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+                  <div class="field field--label-above">                    
+                    <div class="field--items tags">
+                      <i class="fas fa-folder-open"></i> <span class="field--item tag">#Binomial</span>  <span class="field--item tag"># Statistics</span>  <span class="field--item tag"># Probability</span>  <span class="field--item tag"># Elementary</span> 
+                    </div>
+                  </div>
+                  
+                </div>
+
+              </article>
+              <article role="article" class="article is-promoted teaser clearfix unpinned-item blog-list-items">
+               <h2>
+                  <a href="/content/posts/notes-on-the-geometric-distribution" rel="bookmark"><span
+                          property="schema:name">Notes on the Geometric distribution</span></a>
+                </h2> 
+                <div class="content">
+                   <style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+                   <div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script><!-- code folding --><div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Notes on the Geometric distribution</h1>
+<h4 class="date"><em>15.02.2018</em></h4>
+
+</div>
+
+
+<p>Consider simple experiment with two possible outcomes: success or failure. Geometric distribution describes the number of successes in a sequence of independent experiments performed until the first failed one. Formally, if <span class="math inline">\(\xi_1,\xi_2,\ldots\)</span> are results of experiments (that is all <span class="math inline">\(\xi\)</span> are independent and have Bernoulli distribution), then the geometric random variables is <span class="math display">\[
+X=\min\{n\geq 0:\xi_{n+1}=0\}.
+\]</span> (There are other modifications of a geometric distribution, for example when the first fail is also counted).</p>
+<p>Parameters: <span class="math inline">\(p\)</span> – probability of a success in a single experiment.</p>
+<p>Values: <span class="math inline">\(\{0,1,2,\ldots\}.\)</span></p>
+<p>Probability mass function: <span class="math display">\[
+P(X=k)=p^k(1-p), \ k\geq 0.
+\]</span></p>
+<div id="derivation" class="section level3">
+<h3>Derivation</h3>
+<p>The event <span class="math inline">\(X=k\)</span> means that first <span class="math inline">\(k\)</span> experiments were successfull, and <span class="math inline">\((k+1)-\)</span>st was not: <span class="math display">\[
+P(X=k)=P(\xi_1=1,\ldots,\xi_{k}=1,\xi_{k+1}=0)=
+\]</span> by independence <span class="math display">\[
+=P(\xi_1=1)\ldots P(\xi_{k}=1)P(\xi_{k+1}=0)=p^{k}(1-p).
+\]</span></p>
+<p>Moment generating function: <span class="math display">\[
+M(t)=\frac{(1-p)e^t}{1-pe^t}, \ t&lt;
+\ln\frac{1}{p}
+\]</span></p>
+</div>
+<div id="proof" class="section level3">
+<h3>Proof</h3>
+<p><span class="math display">\[
+M(t)=Ee^{tX}=
+\]</span> using probability mass function <span class="math display">\[
+=\sum^\infty_{k=0} e^{tk}p^{k}(1-p)=(1-p)\sum^\infty_{k=0} (pe^t)^{k}=
+\]</span> the sum of a geometric progression with a multiple <span class="math inline">\(pe^t&lt;1\)</span> (condition on <span class="math inline">\(t!\)</span>) <span class="math display">\[
+=\frac{1-p}{1-pe^t}
+\]</span></p>
+<p>Expectation: <span class="math inline">\(EX=\frac{p}{1-p}\)</span></p>
+<p>Variance: <span class="math inline">\(V(X)=\frac{p}{(1-p)^2}\)</span></p>
+</div>
+<div id="derivation-1" class="section level3">
+<h3>Derivation</h3>
+<p>Expectation is the first derivative <span class="math inline">\(M'(0).\)</span> We have <span class="math display">\[
+M'(t)=\frac{(1-p)pe^t}{(1-pe^t)^2}
+\]</span> <span class="math display">\[
+EX=\frac{p}{1-p}
+\]</span> Second moment is the second derivative <span class="math inline">\(M''(0).\)</span> We have <span class="math display">\[
+M''(t)=\frac{(1-p)pe^t}{(1-pe^t)^2}+\frac{2(1-p)p^2e^{2t}}{(1-pe^t)^3}
+\]</span> <span class="math display">\[
+EX^2=\frac{p}{1-p}+\frac{2p^2}{(1-p)^2}
+\]</span> Variance is <span class="math display">\[
+V(X)=\frac{p}{1-p}+\frac{p^2}{(1-p)^2}=\frac{p}{(1-p)^2}
+\]</span></p>
+</div>
+
+
+
+
+</div>
+                   <script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+                   <script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+                  <div class="field field--label-above">                    
+                    <div class="field--items tags">
+                      <i class="fas fa-folder-open"></i> <span class="field--item tag">#Geometric</span>  <span class="field--item tag"># Statistics</span>  <span class="field--item tag"># Probability</span>  <span class="field--item tag"># Elementary</span> 
+                    </div>
+                  </div>
+                  
+                </div>
+
+              </article>
+              <article role="article" class="article is-promoted teaser clearfix unpinned-item blog-list-items">
+               <h2>
+                  <a href="/content/posts/notes-on-the-hypergeometric-distribution" rel="bookmark"><span
+                          property="schema:name">Notes on the Hypergeometric distribution</span></a>
+                </h2> 
+                <div class="content">
+                   <style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+                   <div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script><!-- code folding --><div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Notes on the Hypergeometric distribution</h1>
+<h4 class="date"><em>15.02.2018</em></h4>
+
+</div>
+
+
+<p>In contrast to binomial distribution where the probability of a success is the same for each experiment, the hypergeometric distribution describes situation when the probability of success decreases after each success (and increases after each failure). Each experiment is modelled by an urn containing <span class="math inline">\(N\)</span> balls, <span class="math inline">\(K\)</span> of them being ``lucky’’ (and <span class="math inline">\(N-K\)</span> unlucky). <span class="math inline">\(n\)</span> draws are performed from an urn and the hypergeometric random variable <span class="math inline">\(X\)</span> is the numebr of lucky balls drawn. So, each lcuky ball decreases the probability to pick a lucky ball in the next draw. One more point of view is that the hypergeometric distribution models draws without replacement, while binomial models draws with replacement (to keep the probability of picking a lucky ball constant we return the drawn ball back to the urn).</p>
+<p>Parameters: <span class="math inline">\(N\)</span> – number of balls in the urn, <span class="math inline">\(K\)</span> – number of lucky balls in the urn, <span class="math inline">\(n\)</span> – number of draws, <span class="math inline">\(0\leq n\leq N,\)</span> <span class="math inline">\(0\leq K\leq N.\)</span></p>
+<p>Values: <span class="math inline">\(\{0,1,2,\ldots,n\}\)</span> (in fact values with nonzero probabilities are <span class="math inline">\(k\in[\max(0,n-N+K),\min(n,K)]\)</span>)</p>
+<p>Probability mass function: <span class="math display">\[
+P(X=k)=\frac{{K\choose k}{N-K\choose n-k}}{{N\choose n}}, \ k=0,1,2,\ldots,n.
+\]</span> (we agree that <span class="math inline">\({K\choose k}=0\)</span> for <span class="math inline">\(k&gt;K\)</span>).</p>
+<p>{} There are <span class="math inline">\({N\choose n}\)</span> possibilities to draw <span class="math inline">\(n\)</span> balls from an urn containing <span class="math inline">\(N\)</span> balls. We are interested in draws that contain exactly <span class="math inline">\(k\)</span> lucky balls. So, satisfactory outcomes are draws that contain <span class="math inline">\(k\)</span> lucky and <span class="math inline">\(n-k\)</span> unlucky balls. There are <span class="math inline">\({K\choose k}{N-K\choose n-k}\)</span> possibilities to perform such draw.</p>
+<p>Moment generating function does not have a simple representation: <span class="math display">\[
+M(t)=\sum^{n}_{k=0}e^{tk}\frac{{K\choose k}{N-K\choose n-k}}{{N\choose n}}
+\]</span></p>
+<p>Expectation: <span class="math inline">\(EX=n\frac{K}{N}\)</span></p>
+<p>Variance: <span class="math inline">\(V(X)=\frac{nK(N-k)(N-n)}{N^2(N-1)}\)</span></p>
+<div id="derivation" class="section level3">
+<h3>Derivation</h3>
+<p>We find expectation as a sum over all possible values of <span class="math inline">\(X:\)</span> <span class="math display">\[
+EX=\sum^n_{k=0}k \frac{{K\choose k}{N-K\choose n-k}}{{N\choose n}}=
+\]</span> the summand with <span class="math inline">\(k=0\)</span> is zero <span class="math display">\[
+=\frac{1}{{N\choose n}}\sum^n_{k=1}k {K\choose k}{N-K\choose n-k}=
+\]</span> use the identity <span class="math inline">\(k{K\choose k}=K{K-1 \choose k-1}\)</span> <span class="math display">\[
+=\frac{K}{{N\choose n}}\sum^n_{k=1} {K-1 \choose k-1 }{(N-1)-(K-1)\choose (n-1)-(k-1)}=
+\]</span> change summation variable to <span class="math inline">\(k-1\)</span> <span class="math display">\[
+=\frac{K}{{N\choose n}}\sum^{n-1}_{k=0} {K-1 \choose k }{(N-1)-(K-1)\choose (n-1)-k}=
+\]</span> represent the sum as a sum of all probabilities for hypergeometric distribution with parameters <span class="math inline">\(N-1,K-1,n-1\)</span> (which is 1) <span class="math display">\[
+=\frac{K{N-1\choose n-1}}{{N\choose n}}\sum^{n-1}_{k=0} \frac{{K-1 \choose k }{(N-1)-(K-1)\choose (n-1)-k}}{{N-1\choose n-1}}=\frac{K{N-1\choose n-1}}{{N\choose n}}=n\frac{K}{N}
+\]</span></p>
+<p>Similarly we find <span class="math inline">\(EX(X-1):\)</span> <span class="math display">\[
+EX(X-1)=\sum^n_{k=0} k(k-1)\frac{{K\choose k}{N-K\choose n-k}}{{N\choose n}}=
+\]</span> <span class="math display">\[
+=\frac{1}{{N\choose n}}\sum^n_{k=2}k(k-1) {K\choose k}{N-K\choose n-k}=
+\]</span> use the identity <span class="math inline">\(k(k-1){K\choose k}=K(K-1){K-2 \choose k-2}\)</span> <span class="math display">\[
+=\frac{K(K-1)}{{N\choose n}}\sum^{n-2}_{k=0} {K-2 \choose k }{(N-2)-(K-2)\choose (n-2)-k}=
+\]</span> <span class="math display">\[
+=\frac{K(K-1){N-2\choose n-2}}{{N\choose n}}=n(n-1)\frac{K(K-1)}{N(N-1)}
+\]</span></p>
+<p>Variance is <span class="math display">\[
+V(X)=EX^2-(EX)^2=EX(X-1)+EX-(EX)^2=\]</span> <span class="math display">\[
+=n(n-1)\frac{K(K-1)}{N(N-1)}+n\frac{K}{N}-n^2\frac{K^2}{N^2}=
+\]</span> <span class="math display">\[
+=\frac{nKN^2-n^2KN-nK^2N+n^2K^2}{N^2(N-1)}=\frac{nK(N-k)(N-n)}{N^2(N-1)}
+\]</span></p>
+</div>
+
+
+
+
+</div>
+                   <script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+                   <script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+                  <div class="field field--label-above">                    
+                    <div class="field--items tags">
+                      <i class="fas fa-folder-open"></i> <span class="field--item tag">#Hypergeometric</span>  <span class="field--item tag"># Statistics</span>  <span class="field--item tag"># Probability</span>  <span class="field--item tag"># Elementary</span> 
+                    </div>
+                  </div>
+                  
+                </div>
+
+              </article>
+              <article role="article" class="article is-promoted teaser clearfix unpinned-item blog-list-items">
+               <h2>
+                  <a href="/content/posts/notes-on-the-multinomial-distribution" rel="bookmark"><span
+                          property="schema:name">Notes on the Multinomial distribution</span></a>
+                </h2> 
+                <div class="content">
+                   <style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+                   <div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script><!-- code folding --><div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Notes on the Multinomial distribution</h1>
+<h4 class="date"><em>15.02.2018</em></h4>
+
+</div>
+
+
+<p>A multidimensional generalization of a binomial distribution. Assume that in each experiment there are <span class="math inline">\(k\)</span> possible outcomes (enumerated by <span class="math inline">\(1,2,\ldots,k\)</span>). Probabilities of these outcomes are <span class="math inline">\(p_1,p_2,\ldots,p_k,\)</span> so that <span class="math display">\[
+p_1,\ldots,p_k\geq 0, \  p_1+\ldots+p_k=1.
+\]</span> Multinomial distribution describeds the number of outcomes of each type in <span class="math inline">\(n\)</span> independent repetitions of the experiment:</p>
+<p><span class="math inline">\((X_1,\ldots,X_k)=(m_1,\ldots,m_k)\)</span> if exactly <span class="math inline">\(m_1\)</span> experiments resulted in the outcome <span class="math inline">\(1,\)</span> exactly <span class="math inline">\(m_2\)</span> experiments resulted in the outcome <span class="math inline">\(2,\ldots,\)</span> exactly <span class="math inline">\(m_k\)</span> experiments resulted in the outcome <span class="math inline">\(k.\)</span></p>
+<p>Parameters: <span class="math inline">\(n\)</span> – number of experiments, <span class="math inline">\(k\)</span> – number of outcomes in each experiment, <span class="math inline">\((p_1,\ldots,p_k)\)</span> – probability distribution of an outcome in each experiment.</p>
+<p>Values: all sequences <span class="math inline">\((m_1,\ldots,m_k)\)</span> of non-negative integers that sum up to <span class="math inline">\(n\)</span> (there are <span class="math inline">\({n\choose n+k-1}\)</span> such sequences).</p>
+<p>Probability mass function: <span class="math display">\[
+P(X_1=m_1,\ldots,X_k=m_k)=\frac{n!}{m_1!\ldots m_k!}p^{m_1}_{1}\ldots p^{m_k}_k.
+\]</span></p>
+<div id="derivation" class="section level3">
+<h3>Derivation</h3>
+<p>Let <span class="math inline">\(\xi_l,\)</span> <span class="math inline">\(l=1,2,\ldots,n,\)</span> be the result of <span class="math inline">\(l\)</span>-th experiment, <span class="math inline">\(\xi_l\in\{1,2,\ldots,k\}.\)</span> The event <span class="math display">\[
+\{X_1=m_1,\ldots,X_k=m_k\}
+\]</span> means that exactly <span class="math inline">\(m_1\)</span> variables <span class="math inline">\(\xi_l=1,\)</span> exactly <span class="math inline">\(m_2\)</span> variables <span class="math inline">\(\xi_l=2,\)</span> <span class="math inline">\(\ldots,\)</span> exactly <span class="math inline">\(m_k\)</span> variables <span class="math inline">\(\xi_l=k.\)</span> When variables <span class="math inline">\(\xi_1,\ldots,\xi_l\)</span> are already grouped according to their values, the probability becomes <span class="math inline">\(p^{m_1}_1\ldots p^{m_k}_k.\)</span> The number of partitions of <span class="math inline">\(n\)</span> elements into <span class="math inline">\(k\)</span> groups by <span class="math inline">\(m_1,m_2,\ldots,m_k\)</span> elements is <span class="math inline">\(\frac{n!}{m_1!\ldots m_k!}\)</span>.</p>
+<p>Moment generating function: <span class="math display">\[
+M(t_1,\ldots,t_k)=Ee^{t_1X_1+\ldots+t_kX_k}=(p_1e^{t_1}+\ldots+p_k e^{t_k})^n
+\]</span></p>
+</div>
+<div id="proof" class="section level3">
+<h3>Proof</h3>
+<p><span class="math display">\[
+M(t_1,\ldots,t_k)=Ee^{t_1X_1+\ldots+t_kX_k}=
+\]</span> using probability mass function <span class="math display">\[
+=\sum_{m_1+\ldots+m_k=n}\frac{n!}{m_1!\ldots m_k!}p^{m_1}_1\ldots p^{m_k}_k e^{t_1m_1+\ldots +t_km_k}=
+\]</span> <span class="math display">\[
+=\sum_{m_1+\ldots+m_k=n}\frac{n!}{m_1!\ldots m_k!}(p_1e^{t_1})^{m_1}\ldots (p_ke^{t_k})^{m_k}=
+\]</span> by multinomial formula <span class="math display">\[
+=(p_1 e^{t_1}+\ldots+p_k e^{t_k})^n
+\]</span></p>
+<p>Expectation: <span class="math inline">\(EX_j=np_j,\)</span> <span class="math inline">\(1\leq j\leq k.\)</span></p>
+<p>Variance: <span class="math inline">\(V(X_j)=np_j(1-p_j),\)</span> <span class="math inline">\(1\leq j\leq k\)</span></p>
+<p>Covariance: <span class="math inline">\(cov(X_i,X_j)=-np_ip_j,\)</span> <span class="math inline">\(1\leq i&lt;j\leq k.\)</span></p>
+</div>
+<div id="derivation-1" class="section level3">
+<h3>Derivation</h3>
+<p>The moment generating function of a single variable <span class="math inline">\(X_j\)</span> is obtained from <span class="math inline">\(M(t_1,\ldots,t_k)\)</span> by letting <span class="math inline">\(t_i=0,\)</span> <span class="math inline">\(i\ne j.\)</span> That is <span class="math display">\[
+Ee^{t_jX_j}=M(0,\ldots,0,t_j,0,\ldots,0)=(p_1+\ldots+p_{j-1}+p_j e^{t_j}+p_{j+1}+\ldots+p_k)^n=
+\]</span> using that <span class="math inline">\(p_1+\ldots+p_k=1\)</span> <span class="math display">\[
+=(1-p_j+p_je^{t_j})^n
+\]</span> This is exactly the moment generating function of a binomial distribution with parameters <span class="math inline">\(n,p_j:\)</span> <span class="math display">\[
+X_j\sim Binomial(n,p_j)
+\]</span> In particular <span class="math display">\[
+EX_j=np_j, \ V(X_j)=np_j(1-p_j).
+\]</span> To compute expectation of the product <span class="math inline">\(EX_iX_j,\)</span> <span class="math inline">\(i\ne j,\)</span> we take second mixed derivative of <span class="math inline">\(M\)</span> at point zero: <span class="math display">\[
+\frac{\partial M}{\partial t_i}=np_ie^{t_i}(p_1 e^{t_1}+\ldots+p_k e^{t_k})^n
+\]</span> <span class="math display">\[
+\frac{\partial^2 M}{\partial t_i\partial t_j}=n(n-1)p_ip_je^{t_i+t_j}(p_1 e^{t_1}+\ldots+p_k e^{t_k})^{n-2}
+\]</span> Put <span class="math inline">\(t_1=\ldots=t_k=0\)</span> and get <span class="math display">\[
+E X_iX_j=n(n-1)p_ip_j
+\]</span> So, the covariance <span class="math display">\[
+cov(X_i,X_j)=EX_iX_j-EX_iEX_j=
+\]</span> <span class="math display">\[
+=n(n-1)p_ip_j-n^2p_ip_j=-np_ip_j.
+\]</span></p>
+</div>
+
+
+
+
+</div>
+                   <script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+                   <script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+                  <div class="field field--label-above">                    
+                    <div class="field--items tags">
+                      <i class="fas fa-folder-open"></i> <span class="field--item tag">#Multinomial</span>  <span class="field--item tag">#Statistics</span>  <span class="field--item tag">#Probability</span> 
+                    </div>
+                  </div>
+                  
+                </div>
+
+              </article>
+              <article role="article" class="article is-promoted teaser clearfix unpinned-item blog-list-items">
+               <h2>
+                  <a href="/content/posts/notes-on-the-negative-binomial-distribution" rel="bookmark"><span
+                          property="schema:name">Notes on the Negative binomial distribution</span></a>
+                </h2> 
+                <div class="content">
+                   <style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+                   <div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script><!-- code folding --><div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Notes on the Negative binomial distribution</h1>
+<h4 class="date"><em>15.02.2018</em></h4>
+
+</div>
+
+
+<p>A generalization of a geometric distribution. Negative binomial distribution describes the number of successes in a sequence of independent experiments performed until the <span class="math inline">\(r-\)</span>th failure. Formally, let <span class="math inline">\(\xi_1,\xi_2,\ldots\)</span> are results of experiments (that is all <span class="math inline">\(\xi\)</span> are independent and have Bernoulli distribution). <span class="math inline">\(S_n=\xi_1+\ldots+\xi_n\)</span> is the cumulative sum of <span class="math inline">\(\xi'\)</span>s that represents the number of successes. The fact that there were <span class="math inline">\(r\)</span> failures can be written as <span class="math inline">\(S_n=n-r.\)</span> So, the negative binomial random variables is <span class="math display">\[
+X=S_\tau, \tau=\min\{n\geq 1:S_n=n-r\}
+\]</span> (here <span class="math inline">\(\tau\)</span> is the number of the last experiment, when <span class="math inline">\(r\)</span>-th failure occured).</p>
+<p>Parameters: <span class="math inline">\(r\)</span> – number of failures after which we stop performing experiments, <span class="math inline">\(p\)</span> – probability of a success in a single experiment.</p>
+<p>Values: <span class="math inline">\(\{0,1,2,\ldots\}.\)</span></p>
+<p>Probability mass function: <span class="math display">\[
+P(X=k)={k+r-1\choose k}p^{k}(1-p)^r, \ k\geq 0.
+\]</span></p>
+<div id="derivation" class="section level3">
+<h3>Derivation</h3>
+<p>The event <span class="math inline">\(X=k\)</span> means that when the <span class="math inline">\(r-\)</span>th failure occurd there were exactly <span class="math inline">\(k\)</span> successes. In particular it means that the process stopeed at <span class="math inline">\((k+r)\)</span>-th experiment: <span class="math display">\[
+P(X=k)=P(\tau=k+r, S_{k+r}=k)=
+\]</span> the last experiment is a failure <span class="math display">\[
+=P(\xi_{k+r}=0, S_{k+r-1}=k)=
+\]</span> by independence <span class="math display">\[
+=(1-p)P(S_{k+r-1}=k)=
+\]</span> the sum has a binomial distribution <span class="math display">\[
+=(1-p){k+r-1\choose k}p^{k}(1-p)^(r-1)={k+r-1\choose k}p^{k}(1-p)^r.
+\]</span></p>
+<p>Moment generating function: <span class="math display">\[
+M(t)=\frac{(1-p)^r}{(1-pe^t)^r}, \ t&lt;
+\ln\frac{1}{p}
+\]</span></p>
+</div>
+<div id="proof" class="section level3">
+<h3>Proof</h3>
+<p><span class="math display">\[
+M(t)=Ee^{tX}=
+\]</span> using probability mass function <span class="math display">\[
+=\sum^\infty_{k=0} e^{tk}{k+r-1\choose k}p^{k}(1-p)^r=(1-p)^r\sum^\infty_{k=0} {k+r-1\choose k}(pe^t)^{k}=
+\]</span> the sum is a Taylor expansion of <span class="math inline">\(\frac{1}{(1-x)^r}\)</span> around <span class="math inline">\(0,\)</span> evaluated at <span class="math inline">\(x=pe^t\)</span> (condition on <span class="math inline">\(t\)</span> ensures convergence) <span class="math display">\[
+=\frac{(1-p)^r}{(1-pe^t)^r}
+\]</span></p>
+<p>Expectation: <span class="math inline">\(EX=\frac{pr}{1-p}\)</span></p>
+<p>Variance: <span class="math inline">\(V(X)=\frac{pr}{(1-p)^2}\)</span></p>
+</div>
+<div id="derivation-1" class="section level3">
+<h3>Derivation</h3>
+<p>Expectation is the first derivative <span class="math inline">\(M'(0).\)</span> We have <span class="math display">\[
+M'(t)=r\frac{p(1-p)^re^t}{(1-pe^t)^{r+1}}
+\]</span> <span class="math display">\[
+EX=M'(0)=\frac{pr}{1-p}
+\]</span> Second moment is the second derivative <span class="math inline">\(M''(0).\)</span> We have <span class="math display">\[
+M''(t)=r\frac{p(1-p)^re^t}{(1-pe^t)^{r+1}}+r(r+1)\frac{p^2(1-p)^re^{2t}}{(1-pe^t)^{r+2}}
+\]</span> <span class="math display">\[
+EX^2=\frac{pr}{1-p}+\frac{r(r+1)p^2}{(1-p)^2}
+\]</span> Variance is <span class="math display">\[
+V(X)=\frac{pr}{1-p}+\frac{rp^2}{(1-p)^2}=\frac{pr}{(1-p)^2}
+\]</span></p>
+</div>
+
+
+
+
+</div>
+                   <script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+                   <script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+                  <div class="field field--label-above">                    
+                    <div class="field--items tags">
+                      <i class="fas fa-folder-open"></i> <span class="field--item tag">#Negative-binomial</span>  <span class="field--item tag"># Statistics</span>  <span class="field--item tag"># Probability</span>  <span class="field--item tag"># Elementary</span> 
+                    </div>
+                  </div>
+                  
+                </div>
+
+              </article>
+              <article role="article" class="article is-promoted teaser clearfix unpinned-item blog-list-items">
+               <h2>
+                  <a href="/content/posts/notes-on-the-poisson-distribution" rel="bookmark"><span
+                          property="schema:name">Notes on the Poisson distribution</span></a>
+                </h2> 
+                <div class="content">
+                   <style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+                   <div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script><!-- code folding --><div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Notes on the Poisson distribution</h1>
+<h4 class="date"><em>15.02.2018</em></h4>
+
+</div>
+
+
+<p>Poisson distribution arises as a limit of binomial distribution in the following limiting scheme. Assume that the numebr of trials <span class="math inline">\(n\)</span> increases, but the probability of success <span class="math inline">\(p\)</span> decreases in such a way that the limit exists <span class="math display">\[
+np\to \lambda\in (0,\infty)
+\]</span></p>
+<p>Parameter: <span class="math inline">\(\lambda\)</span> – intensity</p>
+<p>Values: <span class="math inline">\(\{0,1,2,\ldots\}\)</span></p>
+<p>Probability mass function: <span class="math display">\[
+P(X=k)=e^{-\lambda} \frac{\lambda^k}{k!}, \ k\geq 0.
+\]</span></p>
+<div id="derivation" class="section level3">
+<h3>Derivation</h3>
+<p>The probability of <span class="math inline">\(k\)</span> successes for binomial distribution with parameters <span class="math inline">\((n,p)\)</span> is equal to <span class="math display">\[
+{n\choose k}p^k(1-p)^{n-k}.
+\]</span> Let us find its limit when <span class="math inline">\(n\to \infty.\)</span> <span class="math display">\[
+\lim_{n\to\infty}{n\choose k}p^k(1-p)^k=\frac{1}{k!}\lim_{n\to\infty}\frac{n!}{(n-k)!}p^k(1-p)^{n-k}=
+\]</span> by Stirling formula, <span class="math inline">\(n!\sim \sqrt{2\pi n}\frac{n^n}{e^n}\)</span> <span class="math display">\[
+=\frac{1}{k!}\lim_{n\to\infty}\frac{\sqrt{2\pi n}n^ne^{n-k}}{\sqrt{2\pi(n-k)}(n-k)^{n-k}e^n}p^k(1-p)^{n-k}=
+\]</span> <span class="math display">\[
+=\frac{1}{e^kk!}\lim_{n\to\infty}\bigg(\frac{n}{n-k}\bigg)^{n-k}(np)^k(1-p)^{n-k}=
+\]</span> <span class="math display">\[
+=\frac{\lambda^k}{e^kk!}\lim_{n\to\infty}\bigg(1-\frac{k}{n}\bigg)^{-(n-k)}\bigg(1-\frac{np}{n}\bigg)^{n-k}=
+\]</span> use that <span class="math inline">\((1+x/n)^n\to e^x\)</span> <span class="math display">\[
+=\frac{e^ke^{-\lambda}\lambda^k}{e^kk!}=e^{-\lambda} \frac{\lambda^k}{k!}
+\]</span></p>
+<p>Moment generating function: <span class="math display">\[
+M(t)=e^{\lambda(e^t-1)}
+\]</span></p>
+</div>
+<div id="proof" class="section level3">
+<h3>Proof</h3>
+<p><span class="math display">\[
+M(t)=Ee^{tX}=\sum^\infty_{k=0} e^{tk}e^{-\lambda} \frac{\lambda^k}{k!}=
+\]</span> <span class="math display">\[
+=e^{-\lambda}\sum^\infty_{k=0}\frac{(\lambda e^t)^k}{k!}=e^{-\lambda}e^{\lambda e^t}=e^{\lambda(e^t-1)}
+\]</span></p>
+<p>Expectation: <span class="math inline">\(EX=\lambda\)</span></p>
+<p>Variance: <span class="math inline">\(V(X)=\lambda\)</span></p>
+</div>
+<div id="derivation-1" class="section level3">
+<h3>Derivation</h3>
+<p><span class="math display">\[
+M'(t)=\lambda e^t e^{\lambda(e^t-1)}, \ EX=M'(0)=\lambda
+\]</span> <span class="math display">\[
+M''(t)=\lambda e^t e^{\lambda(e^t-1)}+\lambda^2 e^{2t} e^{\lambda(e^t-1)}
+\]</span> <span class="math display">\[
+EX^2=M''(0)=\lambda+\lambda^2
+\]</span> Variance is <span class="math display">\[
+V(X)=\lambda
+\]</span></p>
+</div>
+
+
+
+
+</div>
+                   <script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+                   <script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+                  <div class="field field--label-above">                    
+                    <div class="field--items tags">
+                      <i class="fas fa-folder-open"></i> <span class="field--item tag">#Poisson</span>  <span class="field--item tag"># Statistics</span>  <span class="field--item tag"># Probability</span>  <span class="field--item tag"># Elementary</span> 
+                    </div>
+                  </div>
+                  
+                </div>
+
+              </article>
+              <article role="article" class="article is-promoted teaser clearfix unpinned-item blog-list-items">
+               <h2>
+                  <a href="/content/posts/exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data" rel="bookmark"><span
+                          property="schema:name">Posterior Beta Distribition evolution</span></a>
+                </h2> 
+                <div class="content">
+                   <style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+                   <div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script><!-- code folding --><div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Posterior Beta Distribition evolution</h1>
+<h4 class="date"><em>15.02.2018</em></h4>
+
+</div>
+
+
+<pre class="r"><code>set.seed(1010101)
+theta &lt;- 0.5
+N &lt;- 200
+data &lt;- rbinom(N,1,theta)
+
+a &lt;- 1
+b &lt;- 1
+
+for (i in 1:N){ # suppose patients are treated one-by-one
+  if (i &lt; 10 || i %% 10 == 1 ) {
+    theta.x &lt;- seq(0.01, .99, 0.01)
+    p.y &lt;- dbeta(theta.x,a,b)
+    plot(theta.x,p.y,main = paste("N=",i,"a=",a,"b=",b),type="l")
+  }
+  if (data[i]==1){ # if the i-th is cured by the treatment
+    # basically add 1 to a for X===1
+    a &lt;- a + 1
+  } else { # if the i-th is NOT cured by the treatment
+    # basically add 1 to b for X===0
+    b &lt;- b + 1
+  }
+  # probability of theta&gt;1/2 based on the posterior distribution
+  Ptheta &lt;- 1 - pbeta(0.5,a,b)
+}</code></pre>
+<p><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-1.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-2.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-3.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-4.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-5.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-6.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-7.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-8.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-9.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-10.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-11.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-12.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-13.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-14.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-15.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-16.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-17.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-18.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-19.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-20.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-21.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-22.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-23.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-24.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-25.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-26.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-27.png" width="672"><img src="exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data_files/figure-html/unnamed-chunk-1-28.png" width="672"></p>
+
+
+
+
+</div>
+                   <script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+                   <script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+                  <div class="field field--label-above">                    
+                    <div class="field--items tags">
+                      <i class="fas fa-folder-open"></i> <span class="field--item tag">#Posterior</span>  <span class="field--item tag"># Distribition</span>  <span class="field--item tag"># evolution</span> 
+                    </div>
+                  </div>
+                  
+                </div>
+
+              </article>
+              <article role="article" class="article is-promoted teaser clearfix unpinned-item blog-list-items">
+               <h2>
+                  <a href="/content/posts/trivial-example-of-bayesian-rule-admissibility" rel="bookmark"><span
+                          property="schema:name">Simple Example on a Decision Rules, Admissibility, etc</span></a>
+                </h2> 
+                <div class="content">
+                   <style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+                   <div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script><!-- code folding --><div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Simple Example on a Decision Rules, Admissibility, etc</h1>
+<h4 class="date"><em>15.02.2018</em></h4>
+
+</div>
+
+
+<p>We start with <span class="math inline">\(\theta&gt;0\)</span> and <span class="math inline">\(E[X|\theta]=\theta\)</span> and <span class="math inline">\(Var[X|\theta]=\theta^2\)</span></p>
+<p>We have a class of decision rules that are <span class="math inline">\(S=\{\delta_c(X)=cX, 0 &lt; c &lt; 1\}\)</span></p>
+<p>and we’re give the standard squared loss funciton <span class="math inline">\(L(\theta,a) = (\theta - a)^2\)</span></p>
+<p>To find a decision rule in <span class="math inline">\(S\)</span> that is admissible means finding a decision rule <span class="math inline">\(\delta_{c}\)</span> for there exists no other decision rule that is R-better than <span class="math inline">\(\delta_{c}\)</span></p>
+<p>We can find such a decision rule by finding <span class="math inline">\(\delta_{c}\)</span> for which the Risk is the minimum possible.</p>
+<p>We know that the Bayesian risk for a decsion rule is defined by <span class="math inline">\(R(\theta,a)=E[L(\theta,a)]\)</span></p>
+<p>Thus if <span class="math inline">\(L(\theta,a) = (\theta - a)^2\)</span>, we can substitute that back into the risk formula and get: <span class="math inline">\(R(\theta,a)=E[(\theta - a)^2]\)</span></p>
+<p>Further we know that <span class="math inline">\(a\)</span> is of the form <span class="math inline">\(\delta_c(X)=cX\)</span> for <span class="math inline">\(c \in (0,1)\)</span> and if we also plug that in we get <span class="math inline">\(R(\theta,\delta_{c})=E[(\theta - cX)^2]\)</span></p>
+<p>so we can derive</p>
+\begin{align}
+R(\theta,\delta_{c})=E[(\theta - cX)^2]\\
+=E[\theta^2 -2c\theta X +(cX)^2]\\
+=\theta^2 - 2c\theta E[X] +c^2E[X^2]
+\end{align}
+<p>Now we can use the identity that <span class="math inline">\(Var[\zeta] = E[\zeta^2] - E[\zeta]^2\)</span>, which if we re-arrange, we get <span class="math inline">\(E[\zeta^2] = Var[\zeta] + E[\zeta]^2\)</span>.</p>
+<p>Now let us set <span class="math inline">\(\zeta=\theta -cX\)</span> and put that in our re-arranged identity and we get (Note: <span class="math inline">\(Var(X+c)=Var(X)\)</span>, and where <span class="math inline">\(Var(cX)=c^2Var(X)\)</span> where c is a constant):</p>
+\begin{align}
+\require{cancel}
+E[\zeta^2] = Var[\zeta] + E[\zeta]^2 \\
+E[(\theta -cX)^2] = Var[\theta -cX] + E[\theta -cX]^2 \\
+E[\theta^2-2cX\theta +c^2X^2] = c^2Var[X] + (E[\theta] -cE[X])^2 \\
+E[\theta^2]-2c\theta E[X]+c^2E[X^2] = c^2Var[X] + (\theta -cE[X])^2 \\
+\theta^2-2c\theta E[X]+c^2E[X^2] = c^2Var[X] + \theta^2 -2c\theta E[X] +c^2E[X]^2 \\
+\cancel{\theta^2} \bcancel{-2c\theta E[X]}+c^2E[X^2] = c^2Var[X] + \cancel{\theta^2} \bcancel{-2c\theta E[X]} +c^2E[X]^2 \\
+\xcancel{c^2}E[X^2] = \xcancel{c^2}Var[X] +\xcancel{c^2}E[X]^2 \\
+E[X^2] = Var[X] + E[X]^2 
+\end{align}
+<p>next let us substitute it back into our previous result:</p>
+\begin{align}
+R(\theta,\delta_{c})=\theta^2 - 2c\theta E[X] +c^2E[X^2] \\
+=\theta^2 - 2c\theta E[X] + c^2(Var[X] + E[X]^2) \\
+=\theta^2 - 2c\theta E[X] + c^2Var[X] + c^2E[X]^2 
+\end{align}
+<p>Now we plug back <span class="math inline">\(E[X|\theta]=\theta\)</span> and <span class="math inline">\(Var[X|\theta]=\theta^2\)</span> into the previous result:</p>
+\begin{align}
+R(\theta,\delta_{c})=\theta^2 - 2c\theta E[X] + c^2Var[X] + c^2E[X]^2 \\
+=\theta^2 - 2c\theta \cdot \theta + c^2\theta^2 + c^2(\theta)^2  \\
+=\theta^2 - 2c\theta^2 + 2c^2\theta^2   \\
+=\theta^2
+\end{align}
+
+
+
+
+</div>
+                   <script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+                   <script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+                  <div class="field field--label-above">                    
+                    <div class="field--items tags">
+                      <i class="fas fa-folder-open"></i> <span class="field--item tag">#bayesian</span>  <span class="field--item tag">#decision-rule</span> 
+                    </div>
+                  </div>
+                  
+                </div>
+
+              </article>
+          </div>
+           
+              <div class="turn-page" id="pager"></div>
+		    
+        </div>
+      </section>
+    </div>
+  </div>
+  <footer class="footer container" role="contentinfo">
+    <div class="region region-footer">
+    </div>
+  </footer>
+</div>
+
+<!--Wrapper-->
+
+  <script type="text/javascript">
+    $(document).ready(function() {    	
+      $(this).cPager({
+        pageSize: 5,
+        pageid: "pager",
+        itemClass: "blog-list-items"
+      });
+    });
+  </script>
+</body>
+</html>
+

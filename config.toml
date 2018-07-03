@@ -1,20 +1,9 @@
-siteName = "HRocket"
+siteName = "Arman lost in (multidimensional) space"
 theme = "HR_Publisher"
 disqusShortname = ""
-BuilPath = "/var/www/static_site.com/public"
-publishDir = "/testhrocket"
-logoLink = "/testhrocket"
-
-[[mainMenu]]
-  name = "Home"
-  url = "/testhrocket"
-[[mainMenu]]
-  name = "About"
-  url = "/testhrocket/content/pages/about"
-[[mainMenu]]
-  name = "Blogs"
-  url = "/testhrocket/content/pages/blogs"
-
+BuilPath = "/path-to-hrocket-directory/hrocket/docs"
+publishDir = ""
+logoLink = "/"
 
 [params]
     description = ""

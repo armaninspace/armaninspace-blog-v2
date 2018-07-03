@@ -1,0 +1,85 @@
+---
+title: "Notes on the Poisson distribution"
+date: "15.02.2018"
+teaser: "Poisson distribution arises as a limit of binomial distribution in the following limiting scheme. Assume that the numebr of trials $n$ increases, but the probability of success $p$ decreases in such a way that the limit exists"
+pinned: FALSE
+commentEnable: FALSE
+tags: "Poisson, Statistics, Probability, Elementary"
+---
+
+Poisson distribution arises as a limit of binomial distribution in the following limiting scheme. Assume that the numebr of trials $n$ increases, but the probability of success $p$ decreases in such a way that the limit exists
+$$
+np\to \lambda\in (0,\infty)
+$$ 
+
+Parameter: $\lambda$ -- intensity
+
+Values: $\{0,1,2,\ldots\}$
+
+
+Probability mass function:
+$$
+P(X=k)=e^{-\lambda} \frac{\lambda^k}{k!}, \ k\geq 0.
+$$
+
+### Derivation
+
+The probability of $k$ successes for binomial distribution with parameters $(n,p)$ is equal to 
+$$
+{n\choose k}p^k(1-p)^{n-k}.
+$$
+Let us find its limit when $n\to \infty.$ 
+$$
+\lim_{n\to\infty}{n\choose k}p^k(1-p)^k=\frac{1}{k!}\lim_{n\to\infty}\frac{n!}{(n-k)!}p^k(1-p)^{n-k}=
+$$
+by Stirling formula, $n!\sim \sqrt{2\pi n}\frac{n^n}{e^n}$
+$$
+=\frac{1}{k!}\lim_{n\to\infty}\frac{\sqrt{2\pi n}n^ne^{n-k}}{\sqrt{2\pi(n-k)}(n-k)^{n-k}e^n}p^k(1-p)^{n-k}=
+$$
+$$
+=\frac{1}{e^kk!}\lim_{n\to\infty}\bigg(\frac{n}{n-k}\bigg)^{n-k}(np)^k(1-p)^{n-k}=
+$$
+$$
+=\frac{\lambda^k}{e^kk!}\lim_{n\to\infty}\bigg(1-\frac{k}{n}\bigg)^{-(n-k)}\bigg(1-\frac{np}{n}\bigg)^{n-k}=
+$$
+use that $(1+x/n)^n\to e^x$ 
+$$
+=\frac{e^ke^{-\lambda}\lambda^k}{e^kk!}=e^{-\lambda} \frac{\lambda^k}{k!}
+$$
+
+
+Moment generating function:
+$$
+M(t)=e^{\lambda(e^t-1)}
+$$
+
+
+### Proof
+
+$$
+M(t)=Ee^{tX}=\sum^\infty_{k=0} e^{tk}e^{-\lambda} \frac{\lambda^k}{k!}=
+$$
+$$
+=e^{-\lambda}\sum^\infty_{k=0}\frac{(\lambda e^t)^k}{k!}=e^{-\lambda}e^{\lambda e^t}=e^{\lambda(e^t-1)}
+$$
+
+Expectation: $EX=\lambda$
+
+Variance: $V(X)=\lambda$
+
+### Derivation
+
+$$
+M'(t)=\lambda e^t e^{\lambda(e^t-1)}, \ EX=M'(0)=\lambda
+$$
+$$
+M''(t)=\lambda e^t e^{\lambda(e^t-1)}+\lambda^2 e^{2t} e^{\lambda(e^t-1)}
+$$
+$$
+EX^2=M''(0)=\lambda+\lambda^2
+$$
+Variance is 
+$$
+V(X)=\lambda
+$$
+

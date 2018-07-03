@@ -1,0 +1,82 @@
+---
+title: "Notes on the Geometric distribution"
+date: "15.02.2018"
+teaser: "Consider simple experiment with two possible outcomes: success or failure. Geometric distribution describes the number of successes in a sequence of independent experiments performed until the first failed one."
+pinned: FALSE
+commentEnable: FALSE
+tags: "Geometric, Statistics, Probability, Elementary"
+---
+
+Consider simple experiment with two possible outcomes: success or failure. Geometric distribution describes the number of successes in a sequence of independent experiments performed until the first failed one. Formally, if $\xi_1,\xi_2,\ldots$ are results of experiments (that is all $\xi$ are independent and have Bernoulli distribution), then the geometric random variables is 
+$$
+X=\min\{n\geq 0:\xi_{n+1}=0\}.
+$$
+(There are other modifications of a geometric distribution, for example when the first fail is also counted).
+
+
+Parameters: $p$ -- probability of a success in a single experiment.
+
+Values: $\{0,1,2,\ldots\}.$
+
+Probability mass function:
+$$
+P(X=k)=p^k(1-p), \ k\geq 0.
+$$
+
+### Derivation
+
+The event $X=k$ means that first $k$ experiments were successfull, and $(k+1)-$st was not:
+$$
+P(X=k)=P(\xi_1=1,\ldots,\xi_{k}=1,\xi_{k+1}=0)=
+$$
+by independence
+$$
+=P(\xi_1=1)\ldots P(\xi_{k}=1)P(\xi_{k+1}=0)=p^{k}(1-p).
+$$
+
+
+Moment generating function:
+$$
+M(t)=\frac{(1-p)e^t}{1-pe^t}, \ t<
+\ln\frac{1}{p}
+$$
+
+
+### Proof
+
+$$
+M(t)=Ee^{tX}=
+$$
+using probability mass function
+$$
+=\sum^\infty_{k=0} e^{tk}p^{k}(1-p)=(1-p)\sum^\infty_{k=0} (pe^t)^{k}=
+$$
+the sum of a geometric progression with a multiple $pe^t<1$ (condition on $t!$)
+$$
+=\frac{1-p}{1-pe^t}
+$$
+
+Expectation: $EX=\frac{p}{1-p}$
+
+Variance: $V(X)=\frac{p}{(1-p)^2}$
+
+### Derivation
+
+Expectation is the first derivative $M'(0).$ We have 
+$$
+M'(t)=\frac{(1-p)pe^t}{(1-pe^t)^2}
+$$
+$$
+EX=\frac{p}{1-p}
+$$
+Second moment is the second derivative $M''(0).$ We have 
+$$
+M''(t)=\frac{(1-p)pe^t}{(1-pe^t)^2}+\frac{2(1-p)p^2e^{2t}}{(1-pe^t)^3}
+$$
+$$
+EX^2=\frac{p}{1-p}+\frac{2p^2}{(1-p)^2}
+$$
+Variance is 
+$$
+V(X)=\frac{p}{1-p}+\frac{p^2}{(1-p)^2}=\frac{p}{(1-p)^2}
+$$

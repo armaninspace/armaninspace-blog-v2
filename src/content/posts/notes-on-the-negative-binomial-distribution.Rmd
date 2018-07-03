@@ -1,0 +1,91 @@
+---
+title: "Notes on the Negative binomial distribution"
+date: "15.02.2018"
+teaser: "A generalization of a geometric distribution. Negative binomial distribution describes the number of successes in a sequence of independent experiments performed until the  $r-$th failure"
+pinned: FALSE
+commentEnable: FALSE
+tags: "Negative-binomial, Statistics, Probability, Elementary"
+---
+
+A generalization of a geometric distribution. Negative binomial distribution describes the number of successes in a sequence of independent experiments performed until the  $r-$th failure. Formally, let $\xi_1,\xi_2,\ldots$ are results of experiments (that is all $\xi$ are independent and have Bernoulli distribution). $S_n=\xi_1+\ldots+\xi_n$ is the cumulative sum of $\xi'$s that represents the number of successes. The fact that there were $r$ failures can be written as $S_n=n-r.$ So, the negative binomial random variables is 
+$$
+X=S_\tau, \tau=\min\{n\geq 1:S_n=n-r\}
+$$
+(here $\tau$ is the number of the last experiment, when $r$-th failure occured).
+
+
+Parameters: $r$ -- number of failures after which we stop performing experiments, $p$ -- probability of a success in a single experiment.
+
+Values: $\{0,1,2,\ldots\}.$
+
+Probability mass function:
+$$
+P(X=k)={k+r-1\choose k}p^{k}(1-p)^r, \ k\geq 0.
+$$
+
+### Derivation
+
+The event $X=k$ means that when the $r-$th failure occurd there were exactly $k$ successes. In particular it means that the process stopeed at $(k+r)$-th experiment:
+$$
+P(X=k)=P(\tau=k+r, S_{k+r}=k)=
+$$
+the last experiment is a failure
+$$
+=P(\xi_{k+r}=0, S_{k+r-1}=k)=
+$$
+by independence
+$$
+=(1-p)P(S_{k+r-1}=k)=
+$$
+the sum has a binomial distribution
+$$
+=(1-p){k+r-1\choose k}p^{k}(1-p)^(r-1)={k+r-1\choose k}p^{k}(1-p)^r.
+$$
+
+
+Moment generating function:
+$$
+M(t)=\frac{(1-p)^r}{(1-pe^t)^r}, \ t<
+\ln\frac{1}{p}
+$$
+
+
+### Proof
+
+$$
+M(t)=Ee^{tX}=
+$$
+using probability mass function
+$$
+=\sum^\infty_{k=0} e^{tk}{k+r-1\choose k}p^{k}(1-p)^r=(1-p)^r\sum^\infty_{k=0} {k+r-1\choose k}(pe^t)^{k}=
+$$
+the sum is a Taylor expansion of $\frac{1}{(1-x)^r}$ around $0,$ evaluated at $x=pe^t$ (condition on $t$ ensures convergence)
+$$
+=\frac{(1-p)^r}{(1-pe^t)^r}
+$$
+
+Expectation: $EX=\frac{pr}{1-p}$
+
+Variance: $V(X)=\frac{pr}{(1-p)^2}$
+
+### Derivation
+
+Expectation is the first derivative $M'(0).$ We have 
+$$
+M'(t)=r\frac{p(1-p)^re^t}{(1-pe^t)^{r+1}}
+$$
+$$
+EX=M'(0)=\frac{pr}{1-p}
+$$
+Second moment is the second derivative $M''(0).$ We have 
+$$
+M''(t)=r\frac{p(1-p)^re^t}{(1-pe^t)^{r+1}}+r(r+1)\frac{p^2(1-p)^re^{2t}}{(1-pe^t)^{r+2}}
+$$
+$$
+EX^2=\frac{pr}{1-p}+\frac{r(r+1)p^2}{(1-p)^2}
+$$
+Variance is 
+$$
+V(X)=\frac{pr}{1-p}+\frac{rp^2}{(1-p)^2}=\frac{pr}{(1-p)^2}
+$$
+

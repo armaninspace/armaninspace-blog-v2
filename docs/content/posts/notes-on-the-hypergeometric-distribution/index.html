@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arman lost in (multidimensional) space | Notes on the Hypergeometric distribution</title>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <meta name="generator" content="pandoc">
+
+    <script src="/static/jquery-1.11.3/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="/static/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="/static/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <script src="/static/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+    <script src="/static/bootstrap-3.3.5/shim/respond.min.js"></script>
+    <script src="/static/navigation-1.1/tabsets.js"></script>
+    <link href="/static/highlightjs-9.12.0/default.css" rel="stylesheet">
+
+    <script src="/static/highlightjs-9.12.0/highlight.js"></script>
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+    <script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+    <style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+  <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+  <script src="/static/jquery-1.11.3/jquery.min.js"></script>    
+    <link href="/static/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/static/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <script src="/static/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+    <script src="/static/bootstrap-3.3.5/shim/respond.min.js"></script>
+    <script src="/static/navigation-1.1/tabsets.js"></script>
+    <link href="/static/highlightjs-9.12.0/default.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/styles.css" media="all">
+  <link rel="stylesheet" href="/static/css/responsive.css">
+  <link rel="stylesheet" href="/static/css/fontawesome/css/fontawesome-all.min.css">
+</head>
+<body class="home blog mp6 customizer-styles-applied highlander-enabled highlander-light tablet-desktop">
+<div id="page" class="hfeed site" data-off-canvas-main-canvas="">
+  <div id="hero-header" class="site-hero-section">
+    <header id="master-head" class="site-header" role="banner">
+      <div class="inner">  
+        <div class="site-branding">
+          <a class="site-logo-link" href="/" title="Home" rel="home">
+            <img src="/static/images/logo.png" alt="Home">
+          </a>
+          <h1 class="site-title"><a href="/" title="Home" rel="home">Arman lost in (multidimensional) space</a></h1> 
+             
+        </div>
+        <nav class="jetpack-social-navigation jetpack-social-navigation-svg" role="navigation" aria-label="Social Links Menu">
+          <div class="menu-social-navigation-container">
+            <ul id="menu-social-navigation" class="menu">
+              <li id="" class="menu-item menu-item-type-custom menu-item-object-custom">
+                <a href="https://github.com/armaninspace"><i class="fab fa-github fa-1x"></i></a>
+              </li>
+              <li id="" class="menu-item menu-item-type-custom menu-item-object-custom">
+                 <a href="https://www.linkedin.com/in/arman-anwar-a107961"><i class="fab fa-linkedin fa-1x"></i></a>
+              </li>
+              <li id="" class="menu-item menu-item-type-custom menu-item-object-custom ">
+                 <a href="https://twitter.com/armaninspace"><i class="fab fa-twitter fa-1x"></i></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>    
+    </header>
+  </div>
+  <nav role="navigation" class="main-navigation" id="site-navigation">
+    <div class="region region-navigation-collapsible">
+      <h2 class="sr-only" id="block-bootstrap-main-menu-menu">Main navigation</h2>
+        <ul id="primary-menu" class="menu nav-menu">
+        </ul>
+    </div>
+  </nav>
+
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+      <section class="col-sm-12">
+
+        <a id="main-content"></a>
+        <div class="region region-content">
+          <article class="article full clearfix">
+           
+            <div class="content">
+                <style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+                <div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script><!-- code folding --><div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Notes on the Hypergeometric distribution</h1>
+<h4 class="date"><em>15.02.2018</em></h4>
+
+</div>
+
+
+<p>In contrast to binomial distribution where the probability of a success is the same for each experiment, the hypergeometric distribution describes situation when the probability of success decreases after each success (and increases after each failure). Each experiment is modelled by an urn containing <span class="math inline">\(N\)</span> balls, <span class="math inline">\(K\)</span> of them being ``lucky’’ (and <span class="math inline">\(N-K\)</span> unlucky). <span class="math inline">\(n\)</span> draws are performed from an urn and the hypergeometric random variable <span class="math inline">\(X\)</span> is the numebr of lucky balls drawn. So, each lcuky ball decreases the probability to pick a lucky ball in the next draw. One more point of view is that the hypergeometric distribution models draws without replacement, while binomial models draws with replacement (to keep the probability of picking a lucky ball constant we return the drawn ball back to the urn).</p>
+<p>Parameters: <span class="math inline">\(N\)</span> – number of balls in the urn, <span class="math inline">\(K\)</span> – number of lucky balls in the urn, <span class="math inline">\(n\)</span> – number of draws, <span class="math inline">\(0\leq n\leq N,\)</span> <span class="math inline">\(0\leq K\leq N.\)</span></p>
+<p>Values: <span class="math inline">\(\{0,1,2,\ldots,n\}\)</span> (in fact values with nonzero probabilities are <span class="math inline">\(k\in[\max(0,n-N+K),\min(n,K)]\)</span>)</p>
+<p>Probability mass function: <span class="math display">\[
+P(X=k)=\frac{{K\choose k}{N-K\choose n-k}}{{N\choose n}}, \ k=0,1,2,\ldots,n.
+\]</span> (we agree that <span class="math inline">\({K\choose k}=0\)</span> for <span class="math inline">\(k&gt;K\)</span>).</p>
+<p>{} There are <span class="math inline">\({N\choose n}\)</span> possibilities to draw <span class="math inline">\(n\)</span> balls from an urn containing <span class="math inline">\(N\)</span> balls. We are interested in draws that contain exactly <span class="math inline">\(k\)</span> lucky balls. So, satisfactory outcomes are draws that contain <span class="math inline">\(k\)</span> lucky and <span class="math inline">\(n-k\)</span> unlucky balls. There are <span class="math inline">\({K\choose k}{N-K\choose n-k}\)</span> possibilities to perform such draw.</p>
+<p>Moment generating function does not have a simple representation: <span class="math display">\[
+M(t)=\sum^{n}_{k=0}e^{tk}\frac{{K\choose k}{N-K\choose n-k}}{{N\choose n}}
+\]</span></p>
+<p>Expectation: <span class="math inline">\(EX=n\frac{K}{N}\)</span></p>
+<p>Variance: <span class="math inline">\(V(X)=\frac{nK(N-k)(N-n)}{N^2(N-1)}\)</span></p>
+<div id="derivation" class="section level3">
+<h3>Derivation</h3>
+<p>We find expectation as a sum over all possible values of <span class="math inline">\(X:\)</span> <span class="math display">\[
+EX=\sum^n_{k=0}k \frac{{K\choose k}{N-K\choose n-k}}{{N\choose n}}=
+\]</span> the summand with <span class="math inline">\(k=0\)</span> is zero <span class="math display">\[
+=\frac{1}{{N\choose n}}\sum^n_{k=1}k {K\choose k}{N-K\choose n-k}=
+\]</span> use the identity <span class="math inline">\(k{K\choose k}=K{K-1 \choose k-1}\)</span> <span class="math display">\[
+=\frac{K}{{N\choose n}}\sum^n_{k=1} {K-1 \choose k-1 }{(N-1)-(K-1)\choose (n-1)-(k-1)}=
+\]</span> change summation variable to <span class="math inline">\(k-1\)</span> <span class="math display">\[
+=\frac{K}{{N\choose n}}\sum^{n-1}_{k=0} {K-1 \choose k }{(N-1)-(K-1)\choose (n-1)-k}=
+\]</span> represent the sum as a sum of all probabilities for hypergeometric distribution with parameters <span class="math inline">\(N-1,K-1,n-1\)</span> (which is 1) <span class="math display">\[
+=\frac{K{N-1\choose n-1}}{{N\choose n}}\sum^{n-1}_{k=0} \frac{{K-1 \choose k }{(N-1)-(K-1)\choose (n-1)-k}}{{N-1\choose n-1}}=\frac{K{N-1\choose n-1}}{{N\choose n}}=n\frac{K}{N}
+\]</span></p>
+<p>Similarly we find <span class="math inline">\(EX(X-1):\)</span> <span class="math display">\[
+EX(X-1)=\sum^n_{k=0} k(k-1)\frac{{K\choose k}{N-K\choose n-k}}{{N\choose n}}=
+\]</span> <span class="math display">\[
+=\frac{1}{{N\choose n}}\sum^n_{k=2}k(k-1) {K\choose k}{N-K\choose n-k}=
+\]</span> use the identity <span class="math inline">\(k(k-1){K\choose k}=K(K-1){K-2 \choose k-2}\)</span> <span class="math display">\[
+=\frac{K(K-1)}{{N\choose n}}\sum^{n-2}_{k=0} {K-2 \choose k }{(N-2)-(K-2)\choose (n-2)-k}=
+\]</span> <span class="math display">\[
+=\frac{K(K-1){N-2\choose n-2}}{{N\choose n}}=n(n-1)\frac{K(K-1)}{N(N-1)}
+\]</span></p>
+<p>Variance is <span class="math display">\[
+V(X)=EX^2-(EX)^2=EX(X-1)+EX-(EX)^2=\]</span> <span class="math display">\[
+=n(n-1)\frac{K(K-1)}{N(N-1)}+n\frac{K}{N}-n^2\frac{K^2}{N^2}=
+\]</span> <span class="math display">\[
+=\frac{nKN^2-n^2KN-nK^2N+n^2K^2}{N^2(N-1)}=\frac{nK(N-k)(N-n)}{N^2(N-1)}
+\]</span></p>
+</div>
+
+
+
+
+</div>
+                <script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+                <script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+              
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </div>
+  <footer class="footer container" role="contentinfo">
+    <div class="region region-footer">
+    </div>
+  </footer>
+</div>
+
+<!--Wrapper-->
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/jquery-3.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,36 @@
+---
+title: "Posterior Beta Distribition evolution"
+date: "15.02.2018"
+teaser: "exploring-the-evolution-of-a-beta-distribition-with-the-arrival-of-data"
+pinned: FALSE
+commentEnable: FALSE
+tags: "Posterior, Distribition, evolution"
+---
+
+```{r}
+set.seed(1010101)
+theta <- 0.5
+N <- 200
+data <- rbinom(N,1,theta)
+
+a <- 1
+b <- 1
+
+for (i in 1:N){ # suppose patients are treated one-by-one
+  if (i < 10 || i %% 10 == 1 ) {
+    theta.x <- seq(0.01, .99, 0.01)
+    p.y <- dbeta(theta.x,a,b)
+    plot(theta.x,p.y,main = paste("N=",i,"a=",a,"b=",b),type="l")
+  }
+  if (data[i]==1){ # if the i-th is cured by the treatment
+    # basically add 1 to a for X===1
+    a <- a + 1
+  } else { # if the i-th is NOT cured by the treatment
+    # basically add 1 to b for X===0
+    b <- b + 1
+  }
+  # probability of theta>1/2 based on the posterior distribution
+  Ptheta <- 1 - pbeta(0.5,a,b)
+}
+
+```
