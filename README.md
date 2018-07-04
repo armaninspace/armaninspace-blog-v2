@@ -19,7 +19,7 @@ logoLink = "/"<br />
   name = "Blogs"<br />
   url = "/content/pages/blogs"<br />
 
-2) for github pages (when user's github page repo is "testhrocket")<br />
+2) for github pages (when user's github page repo is "armaninspace-blog-v2")<br />
 publishDir = "/armaninspace-blog-v2"<br />
 logoLink = "/armaninspace-blog-v2"<br />
 [[mainMenu]]<br />
