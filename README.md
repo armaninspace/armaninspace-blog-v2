@@ -20,15 +20,15 @@ logoLink = "/"<br />
   url = "/content/pages/blogs"<br />
 
 2) for github pages (when user's github page repo is "testhrocket")<br />
-publishDir = "/testhrocket"<br />
-logoLink = "/testhrocket"<br />
+publishDir = "/armaninspace-blog-v2"<br />
+logoLink = "/armaninspace-blog-v2"<br />
 [[mainMenu]]<br />
   name = "Home"<br />
-  url = "/testhrocket"<br />
+  url = "/armaninspace-blog-v2"<br />
 [[mainMenu]]<br />
   name = "About"<br />
-  url = "/testhrocket/content/pages/about"<br />
+  url = "/armaninspace-blog-v2/content/pages/about"<br />
 [[mainMenu]]<br />
   name = "Blogs"<br />
-  url = "/testhrocket/content/pages/blogs"<br />
+  url = "/armaninspace-blog-v2/content/pages/blogs"<br />
 
