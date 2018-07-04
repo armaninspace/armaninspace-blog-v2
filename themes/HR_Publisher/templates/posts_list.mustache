@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="{{ publishDir }}/static/css/responsive.css">
   <link rel="stylesheet" href="{{ publishDir }}/static/css/fontawesome/css/fontawesome-all.min.css">
   <link rel="stylesheet" href="{{ publishDir }}/static/cpager/css/cPager.css" media="all">
-    <script type="text/javascript" src="{{ publishDir }}/static/cpager/js/cPager.js"></script>
+    
 </head>
 <body class="home blog mp6 customizer-styles-applied highlander-enabled highlander-light tablet-desktop">
 <div id="page" class="hfeed site" data-off-canvas-main-canvas="">
@@ -88,6 +88,9 @@
                 </h2> 
                 
                 <div class="content">
+                  {{# pheader }}
+                  {{{ . }}}
+                  {{/pheader}} 
                   {{# teaser }}
                   {{{ . }}}
                   {{/teaser}}
@@ -111,6 +114,9 @@
                           property="schema:name">{{ title }}</span></a>
                 </h2> 
                 <div class="content">
+                   {{# pheader }}
+                   {{{ . }}}
+                   {{/pheader}} 
                    {{# teaser }}
                    {{{ . }}}
                    {{/teaser}} 
@@ -139,7 +145,7 @@
 </div>
 
 <!--Wrapper-->
-
+<script type="text/javascript" src="{{ publishDir }}/static/cpager/js/cPager.js"></script>
 {{#pager}}
   <script type="text/javascript">
     $(document).ready(function() {    	
