@@ -142,7 +142,7 @@ markDownReader <- function(buildPath, HRroot, fileName, pageToRead = FALSE, post
 #' @return list yaml headers
 readRMDyamlHeaders <- function(file, rawFileName = "") {
   # Read in the lines of your file
-  lines <- readLines(file)
+  lines <- readLines(file, warn=FALSE)
   # Find the header portion contained between the --- lines. 
   header_line_nums <- which(lines == "---") + c(1, -1)
   #print(header_line_nums)
