@@ -1,9 +1,12 @@
 siteName = "Arman lost in (multidimensional) space"
 theme = "HR_Publisher"
 disqusShortname = ""
-BuilPath = "/path-to-hrocket-directory/hrocket/docs"
+BuilPath = "/var/www/static_site.com/public"
 publishDir = ""
 logoLink = "/"
+metaKeywords = "HTML, CSS, XML, XHTML, JavaScript"
+googleAnalyticsTrackingId = "UA-232232-34"
+siteUrl = "http://example.com"
 
 [params]
     description = ""
