@@ -354,10 +354,13 @@ if(length(posts) > 0) {
     # Create actual output file
     writeLines(
       whisker.render(postTemplate, data),
-      #paste(BuildPath, "/content/pages/blogs/index.html", sep = ""))
-      # For making blog list as home page
-      paste(BuildPath, "/index.html", sep = ""))
+      paste(BuildPath, "/content/pages/blogs/index.html", sep = ""))
     
+    # Create actual output file
+    # For making blog list as home page
+    writeLines(
+      whisker.render(postTemplate, data),
+      paste(BuildPath, "/index.html", sep = ""))
   }
 }
 
